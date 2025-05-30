@@ -25,8 +25,8 @@ This is a simple and clean Laravel 10 project that implements a secure and user-
 
 ## 📸 Screenshots
 
-| Register Page | Login Page | Reset Password |
-|---------------|------------|----------------|
+| Register Form | Register Successfully | Login Form | Login Successfully | Forgot Password | Reset Link | Reset Password Form | After Reset Password | 
+|---------------|------------|----------------|----------------|----------------|----------------|----------------|----------------|
 | ![Register Form](screenshots/register.png) | ![Register-successful](screenshots/register-successfully.png) | ![Login Form](screenshots/login-page.png) | ![Login Successful](screenshots/login-successfully.png) | ![Forgot Password](screenshots/forgot-password-page.png) | ![Reset link](screenshots/mailtrapLink.png) | ![Reset Password Form](screenshots/passwordUpdate-page.png) | ![After Reset Password](screenshots/password-reset-successfully.png) |
 
 > Screenshots are located in the `/screenshots` folder. Make sure to include them in your repo!
