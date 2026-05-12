@@ -25,7 +25,9 @@ WORKDIR /app
 COPY . .
 
 # Create necessary directories
-RUN mkdir -p /app/storage /app/bootstrap/cache
+RUN mkdir -p /app/storage/framework/{sessions,views,cache} \
+    && mkdir -p /app/storage/logs \
+    && mkdir -p /app/bootstrap/cache
 
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
