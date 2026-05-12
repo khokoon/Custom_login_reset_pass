@@ -9,7 +9,6 @@ RUN apt-get update && apt-get install -y \
     unzip \
     && docker-php-ext-install \
     pdo \
-    pdo_mysql \
     pdo_pgsql \
     zip \
     xml \

@@ -23,7 +23,15 @@ services:
       - key: LOG_CHANNEL
         value: "single"
       - key: DB_CONNECTION
-        value: "mysql"
+        value: "pgsql"
+      - key: DB_HOST
+        value: "dpg-d5510dbb0rni3bka-a.oregon-postgres.render.com"
+      - key: DB_PORT
+        value: "5432"
+      - key: DB_DATABASE
+        value: "custom_login_pgSql"
+      - key: DB_USERNAME
+        value: "custom_login_pgSql_user"
       - key: CACHE_DRIVER
         value: "file"
       - key: SESSION_DRIVER
