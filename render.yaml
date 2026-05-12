@@ -1,0 +1,49 @@
+services:
+  - type: web
+    name: custom-login-reset-pass
+    env: docker
+    region: oregon
+    plan: free
+    
+    # Build configuration
+    dockerfilePath: ./Dockerfile
+    
+    # Environment variables
+    envVars:
+      - key: APP_NAME
+        value: "Custom Login Reset Pass"
+      - key: APP_ENV
+        value: "production"
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_KEY
+        generateValue: true
+      - key: APP_URL
+        value: "https://custom-login-reset-pass.onrender.com"
+      - key: LOG_CHANNEL
+        value: "single"
+      - key: DB_CONNECTION
+        value: "mysql"
+      - key: CACHE_DRIVER
+        value: "file"
+      - key: SESSION_DRIVER
+        value: "file"
+    
+    # Health check
+    healthCheckPath: /health
+    healthCheckInterval: 30
+    
+    # Build command
+    buildCommand: "composer install --no-dev --optimize-autoloader && php artisan migrate --force"
+    
+    # Start command
+    startCommand: "php -S 0.0.0.0:8000 -t public"
+    
+    # Port
+    port: 8000
+    
+    # Auto-deploy on push
+    autoDeployOnPush: true
+    
+    # Branch to deploy
+    branch: deployment
