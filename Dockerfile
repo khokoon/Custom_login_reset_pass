@@ -24,8 +24,8 @@ WORKDIR /app
 # Copy application files
 COPY . .
 
-# Create bootstrap/cache directory before composer install
-RUN mkdir -p /app/bootstrap/cache
+# Create necessary directories
+RUN mkdir -p /app/storage /app/bootstrap/cache
 
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
